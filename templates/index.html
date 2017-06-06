@@ -7,7 +7,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>An empty page</title>
+  <title>Linguistic Environment</title>
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
   <script type="text/javascript">
     function ExampleJS() {
@@ -25,7 +25,7 @@
 <body>
   <style>
     * {
-      border: 1px solid rgba(0, 0, 0, 0.3);
+      /*border: 1px solid rgba(0, 0, 0, 0.3);*/
       font-family: 'Lora', sans-serif;
       font-size: 100%;
     }
@@ -36,13 +36,13 @@
       font-family: 'Lora', sans-serif;
     }
 
-    div.container1 {
-      height: 315px;
+    .container1 {
+      height: 815px;
       position: relative;
     }
 
-    div.container2 {
-      height: 500px;
+    .container2 {
+      height: 515px;
       position: relative;
     }
 
@@ -58,7 +58,7 @@
     p1 {
       position: relative;
       left: 2px;
-      top: 7%;
+      top: 5%;
     }
 
     .optional1 {
@@ -66,14 +66,14 @@
       left: 2px;
       width: 25%;
       height: 10%;
-      top: 15%;
+      top: 10%;
       min-width: 120px;
     }
 
     p2 {
       position: relative;
       left: 2px;
-      top: 28%;
+      top: 22%;
     }
 
     .optional2 {
@@ -81,42 +81,42 @@
       left: 2px;
       width: 25%;
       height: 10%;
-      bottom: 15%;
+      top: 30%;
       min-width: 120px;
     }
 
     p3 {
-      text-indent: 2px;
       position: absolute;
-      left: 2px;
-      top: 0px;
+      /*left: 9px;*/
+      left: 0%;
+      top: 4%;
     }
+
     p4 {
-      text-indent: 4px;
       position: absolute;
       left: 50%;
-      top: 0px;
+      top: 4%;
     }
 
     .textBox1 {
       position: absolute;
       left: 2px;
       top: 10%;
-      width: 49.4%;
-      height: 85%;
+      width: 50%;
+      height: 83%;
     }
 
     .textBox2 {
       position: absolute;
       top: 10%;
       right: 2px;
-      width: 49.4%;
-      height: 85%;
+      width: 50%;
+      height: 83%;
     }
 
     .button {
       position: absolute;
-      bottom: 0%;
+      bottom: 0px;
       left: 1px;
     }
 
@@ -142,20 +142,20 @@
       </p2>
       <br><br>
       <textarea name="optAlone" id="optAlone" class="optional2" placeholder="ts,eɪ">{{upOptAlone}}</textarea>
-  </div>
-  <div class="container2">
-    <p3>
-       Input
-    </p3>
-    <p4>
-      Output
-    </p4>
-    <br><br>
-    <textarea name="inputBox" id="inputBox" class="textBox1" placeholder=" Input text here">{{upInputBox}}</textarea>
-    <textarea name="outputBox" id="outputBox" class="textBox2" placeholder=" Conditioning environments will appear here">{{upOutputBox}}</textarea>
-    <br>
-    <input name="my-form" class=button type="submit" value="Send" />
+      <div class="container2">
+        <p3>
+          Input
+        </p3>
+        <p4>
+          Output
+        </p4>
+        <br><br>
+        <textarea name="inputBox" id="inputBox" class="textBox1" placeholder=" Input text here">{{upInputBox}}</textarea>
+        <textarea name="outputBox" id="outputBox" class="textBox2" placeholder=" Conditioning environments will appear here">{{upOutputBox}}</textarea>
+        <br>
+        <input name="my-form" class=button type="submit" value="Send" />
     </form>
+    </div>
   </div>
 </body>
 
