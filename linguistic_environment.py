@@ -20,7 +20,6 @@ def form_post():
     optLeft = request.form['optLeft']
     optAlone = request.form['optAlone']
     inputBox = request.form['inputBox']
-    return inputBox
     words = inputBox.split()
     # Spacing diacritics, non-spacing diacritics, and suprasegmentals
     # http://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm
@@ -95,7 +94,8 @@ def form_post():
                 # save the environment of the desired character and write it to file
                 environment = left + '_' + right
                 output += (environment.encode('utf-8')) + "\n"
-    return render_template("index.html", upLetter=character, upOptLeft=optLeft, upOptAlone=optAlone, upInputBox=inputBox, upOutputBox=output)
+    return output
+    # return render_template("index.html", upLetter=character, upOptLeft=optLeft, upOptAlone=optAlone, upInputBox=inputBox, upOutputBox=output)
 
 
 if __name__ == "__main__":
