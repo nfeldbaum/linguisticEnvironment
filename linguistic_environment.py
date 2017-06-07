@@ -94,7 +94,8 @@ def form_post():
                 # save the environment of the desired character and write it to file
                 environment = left + '_' + right
                 output += (environment) + "\n"
-    return render_template("index.html", upLetter=character, upOptLeft=optLeft, upOptAlone=optAlone, upInputBox=inputBox, upOutputBox=output)
+    return output
+    #return render_template("index.html", upLetter=character, upOptLeft=optLeft, upOptAlone=optAlone, upInputBox=inputBox, upOutputBox=output)
 
 
 if __name__ == "__main__":
