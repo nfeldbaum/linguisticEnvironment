@@ -29,7 +29,7 @@ def form_post():
                         u'\u031D', u'\u0329', u'\u031E', u'\u032F', u'\u0318', u'\u0319', u'\u0306',
                         u'\u030B', u'\u0301', u'\u0304', u'\u0300', u'\u030F', u'\u035C', u'\u0361',
                         u'\u02C8', u'\u02CC', u'\u02D0', u'\u02D0', u'\u02D0', u'\u02B4', u'\u02B0',
-                        u'\u02B1', u'\u02B2', u'\u02B7', u'\u02E0', u'\u02DE']
+                        u'\u02B1', u'\u02B2', u'\u02B7', u'\u02E0', u'\u02E4', u'\u02DE']
     if optLeft != "":
         for char in optLeft.split():
             singleCharacters.append([char, "left", "defined"])
@@ -95,7 +95,7 @@ def form_post():
                 environment = left + '_' + right
                 output += (environment) + "\n"
     return output
-    #return render_template("index.html", upLetter=character, upOptLeft=optLeft, upOptAlone=optAlone, upInputBox=inputBox, upOutputBox=output)
+    # return render_template("index.html", upLetter=character, upOptLeft=optLeft, upOptAlone=optAlone, upInputBox=inputBox, upOutputBox=output)
 
 
 if __name__ == "__main__":
