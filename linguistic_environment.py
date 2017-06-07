@@ -17,7 +17,6 @@ def form():
 @app.route('/', methods=['POST'])
 def form_post():
     character = request.form['letter']
-    return character
     optLeft = request.form['optLeft']
     optAlone = request.form['optAlone']
     inputBox = request.form['inputBox']
