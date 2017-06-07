@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- python -m SimpleHTTPServer -->
-<!-- http://127.0.0.1:8000/atomLiveServer.html -->
+<!-- http://127.0.0.1:8000/linguistic_environment.py -->
 
 <html lang="en-US">
 
@@ -22,6 +22,15 @@
   </script>
 </head>
 
+<style>
+  body {
+    background-image: url("https://static.pexels.com/photos/207253/pexels-photo-207253.jpeg");
+  }
+  html, body {
+    height: 100%;
+  }
+</style>
+
 <body>
   <style>
     * {
@@ -31,27 +40,47 @@
     }
 
     h1 {
+      position: relative;
       font-size: 200%;
+      line-height: 140px;
       text-align: center;
       font-family: 'Lora', sans-serif;
+      color: white;
+      margin: auto;
+      height: 140px;
+      padding-left: 60px;
+      padding-right: 60px;
+      background-image: linear-gradient(to bottom, rgba(100, 100, 100, .9), rgba(100, 100, 100, .9)), linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0));
+      background-clip: content-box, padding-box;
+      /*width: 90.5%;*/
+      /*background-color: grey;*/
     }
 
-    .container1 {
-      height: 815px;
+    .container {
+      margin: auto;
+      bottom: 0px;
       position: relative;
+      height: 100%;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-bottom: 60px;
+      background-image: linear-gradient(to bottom, rgba(250, 250, 250, .9), rgba(250, 250, 250, .9)), linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0));
+      background-clip: content-box, padding-box;
     }
 
     .container2 {
       height: 515px;
       position: relative;
+      padding: 60px;
     }
 
     .letter {
       position: relative;
       left: 2px;
+      box-shadow: 2px 2px 5px #888888;
       width: 8%;
       height: 4%;
-      top: 0%;
+      top: 5px;
       min-width: 60px;
     }
 
@@ -63,6 +92,7 @@
 
     .optional1 {
       position: relative;
+      box-shadow: 2px 2px 5px #888888;
       left: 2px;
       width: 25%;
       height: 10%;
@@ -78,6 +108,7 @@
 
     .optional2 {
       position: relative;
+      box-shadow: 2px 2px 5px #888888;
       left: 2px;
       width: 25%;
       height: 10%;
@@ -101,6 +132,7 @@
 
     .textBox1 {
       position: absolute;
+      box-shadow: 2px 2px 5px #888888;
       left: 2px;
       top: 10%;
       width: 50%;
@@ -109,6 +141,7 @@
 
     .textBox2 {
       position: absolute;
+      box-shadow: 2px 2px 5px #888888;
       top: 10%;
       right: 2px;
       width: 50%;
@@ -117,7 +150,8 @@
 
     .button {
       position: absolute;
-      bottom: 0px;
+      box-shadow: 2px 2px 5px #888888;
+      bottom: 4px;
       left: 1px;
     }
 
@@ -126,36 +160,40 @@
     }
   </style>
   <br>
-  <h1>Linguistic Environment</h1>
-  <br>
-  <div class="container1">
-    <form NAME="myform" action="/" method="POST" onSubmit="JavaScript:ExampleJS()">
-      <textarea name="letter" id="letter" class="letter" placeholder=" Letter">{{upLetter}}</textarea>
-      <br><br>
-      <p1>
-        If you wish to define your own left-attaching diacritics/phones, type them below. Most diacritics are recognized by default. For a complete list, see the bottom of the page.
-      </p1>
-      <br><br>
-      <textarea name="optLeft" id="optLeft" class="optional1" placeholder="ʰ,ˤ">{{upOptLeft}}</textarea>
-      <br><br>
-      <p2>
-        If you wish to define your own multi-character phones (such as affricates or diphthongs), type them below. No affricates or diphthongs are included by default.
-      </p2>
-      <br><br>
-      <textarea name="optAlone" id="optAlone" class="optional2" placeholder="ts,eɪ">{{upOptAlone}}</textarea>
-      <div class="container2">
-        <p3>
-          Input
-        </p3>
-        <p4>
-          Output
-        </p4>
+    <div class="h1Class">
+      <h1>Linguistic Environment</h1>
+    </div>
+    <div class="container">
+    <br>
+    <div class="container1">
+      <form NAME="myform" action="/" method="POST" onSubmit="JavaScript:ExampleJS()">
+        <textarea name="letter" id="letter" class="letter" placeholder=" Letter">{{upLetter}}</textarea>
         <br><br>
-        <textarea name="inputBox" id="inputBox" class="textBox1" placeholder=" Input text here">{{upInputBox}}</textarea>
-        <textarea name="outputBox" id="outputBox" class="textBox2" placeholder=" Conditioning environments will appear here">{{upOutputBox}}</textarea>
-        <br>
-        <input name="my-form" class=button type="submit" value="Send" />
-    </form>
+        <p1>
+          If you wish to define your own left-attaching diacritics/phones, type them below. Most diacritics are recognized by default. For a complete list, see the bottom of the page.
+        </p1>
+        <br><br>
+        <textarea name="optLeft" id="optLeft" class="optional1" placeholder="ʰ,ˤ">{{upOptLeft}}</textarea>
+        <br><br>
+        <p2>
+          If you wish to define your own multi-character phones (such as affricates or diphthongs), type them below. No affricates or diphthongs are included by default.
+        </p2>
+        <br><br>
+        <textarea name="optAlone" id="optAlone" class="optional2" placeholder="ts,eɪ">{{upOptAlone}}</textarea>
+        <div class="container2">
+          <p3>
+            Input
+          </p3>
+          <p4>
+            Output
+          </p4>
+          <br><br>
+          <textarea name="inputBox" id="inputBox" class="textBox1" placeholder=" Input text here">{{upInputBox}}</textarea>
+          <textarea name="outputBox" id="outputBox" class="textBox2" placeholder=" Conditioning environments will appear here">{{upOutputBox}}</textarea>
+          <br>
+          <input name="my-form" class=button type="submit" value="Send" />
+      </form>
+      </div>
     </div>
   </div>
 </body>
