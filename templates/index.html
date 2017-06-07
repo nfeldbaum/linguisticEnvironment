@@ -81,7 +81,7 @@
       .textBox2 {
         height: 40%;
       }
-      .button {
+      .button,.reset {
         top: 250px;
       }
       .container2 {
@@ -105,7 +105,7 @@
       .textBox2 {
         height: 70%;
       }
-      .button {
+      .button,.reset {
         top: 625px;
       }
       .container2 {
@@ -236,6 +236,12 @@
       left: 20px;
     }
 
+    .reset {
+      position: absolute;
+      box-shadow: 2px 2px 5px #888888;
+      left: 100px;
+    }
+
     textarea {
       resize: none;
     }
@@ -268,7 +274,7 @@
           <textarea name="inputBox" id="inputBox" class="textBox1" placeholder="Input text here">{{upInputBox}}</textarea>
           <textarea name="outputBox" id="outputBox" class="textBox2" placeholder="Conditioning environments will appear here">{{upOutputBox}}</textarea>
           <br>
-          <input name="my-form" class=button type="submit" value="Send" />
+          <input name="my-form" class=button type="submit" value="Submit" />
       </form>
       <form NAME="reset" action="/" method="POST" onSubmit="JavaScript:Reset()">
         <input name="reset" class=reset type="reset" value="Reset" />
