@@ -10,15 +10,15 @@
   <title>Linguistic Environment</title>
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
   <script type="text/javascript">
-    function Submit() {
-      var oldLetter = document.getElementById("letter").value;
-      var oldOptionalLeft = document.getElementById("optLeft").value;
-      var oldOptionalAlone = document.getElementById("optAlone").value;
-      var oldInputBox = document.getElementById("inputBox").value;
-      if (oldLetter == "" || oldInputBox == "") {
-        alert("You must type a letter to search for in the first box, as well as give data to search through in the bottom left box.");
-      }
-    }
+    // function Submit() {
+    //   var oldLetter = document.getElementById("letter").value;
+    //   var oldOptionalLeft = document.getElementById("optLeft").value;
+    //   var oldOptionalAlone = document.getElementById("optAlone").value;
+    //   var oldInputBox = document.getElementById("inputBox").value;
+    //   if (oldLetter == "" || oldInputBox == "") {
+    //     alert("You must type a letter to search for in the first box, as well as give data to search through in the bottom left box.");
+    //   }
+    // }
     function Reset() {
       var oldLetter = document.getElementById("letter").value = " ";
       var oldOptionalLeft = document.getElementById("optLeft").value = " ";
@@ -254,7 +254,7 @@
   <div class="container">
     <br>
     <div class="container1">
-      <form NAME="myform" action="/" method="POST" onSubmit="JavaScript:Submit()">
+      <!-- <form NAME="myform" action="/" method="POST" onSubmit="JavaScript:Submit()">
         <textarea name="letter" id="letter" class="letter" placeholder=" Letter">{{upLetter}}</textarea>
         <p1>
           If you wish to define your own left-attaching diacritics/phones, type them below. Most diacritics are recognized by default. For a complete list, see the bottom of the page.
@@ -276,7 +276,7 @@
           <textarea name="outputBox" id="outputBox" class="textBox2" placeholder="Conditioning environments will appear here">{{upOutputBox}}</textarea>
           <br>
           <input name="my-form" class=button type="submit" value="Submit" />
-      </form>
+      </form> -->
       <form NAME="reset" action="/" method="POST" onSubmit="JavaScript:Reset()">
         <input name="reset" class=reset type="reset" value="Reset" />
       </form>
