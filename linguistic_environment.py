@@ -20,6 +20,7 @@ def form_post():
     optLeft = request.form['optLeft']
     optAlone = request.form['optAlone']
     inputBox = request.form['inputBox']
+    return inputBox
     words = inputBox.split()
     # Spacing diacritics, non-spacing diacritics, and suprasegmentals
     # http://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm
