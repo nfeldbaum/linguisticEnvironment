@@ -76,7 +76,7 @@
         height: 40%;
       }
       .button {
-        top: 410px;
+        top: 250px;
       }
       .container2 {
         height: 400px;
@@ -100,7 +100,7 @@
         height: 70%;
       }
       .button {
-        top: 775px;
+        top: 625px;
       }
       .container2 {
         height: 700px;
@@ -113,6 +113,7 @@
         background-clip: content-box, padding-box;
       }
     }
+
     @media only screen and (min-width: 675px) {
       .container1 {
         background-image: linear-gradient(to bottom, rgba(250, 250, 250, .9), rgba(250, 250, 250, .9)), linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0));
@@ -130,16 +131,16 @@
     }
 
     .container1 {
-      height: 100%;
+      height: 1200px;
     }
 
     .container2 {
       position: relative;
+      top: 250px;
       padding: 60px;
     }
 
     .letter {
-      display: block;
       position: relative;
       left: 20px;
       box-shadow: 2px 2px 5px #888888;
@@ -150,21 +151,22 @@
     }
 
     p1 {
+      display: block;
       position: relative;
       /*left: 20px;*/
-      display: block;
       padding-left: 20px;
       padding-right: 20px;
-      top: 130px;
+      top: 150px;
     }
 
     .optional1 {
+      display: inline;
       position: relative;
       box-shadow: 2px 2px 5px #888888;
       left: 20px;
       width: 25%;
       height: 10%;
-      top: 120px;
+      top: 170px;
       min-width: 120px;
     }
 
@@ -173,16 +175,17 @@
       position: relative;
       padding-left: 20px;
       padding-right: 20px;
-      top: 125px;
+      top: 180px;
     }
 
     .optional2 {
+      display: block;
       position: relative;
       box-shadow: 2px 2px 5px #888888;
       left: 20px;
       width: 25%;
       height: 10%;
-      top: 120px;
+      top: 200px;
       min-width: 120px;
     }
 
@@ -190,7 +193,7 @@
       position: absolute;
       font-weight: bold;
       left: calc(25% - 20px);
-      top: 150px;
+      top: 0px;
     }
 
     p4 {
@@ -198,7 +201,7 @@
       font-weight: bold;
       left: calc(75% - 40px);
       /*left: 50%;*/
-      top: 150px;
+      top: 0px;
     }
 
     .textBox1 {
@@ -207,7 +210,7 @@
       position: absolute;
       box-shadow: 2px 2px 5px #888888;
       left: 20px;
-      top: 180px;
+      top: 30px;
       width: calc(50% - 30px);
     }
 
@@ -216,7 +219,7 @@
       padding: 0;
       position: absolute;
       box-shadow: 2px 2px 5px #888888;
-      top: 180px;
+      top: 30px;
       right: 20px;
       width: calc(50% - 30px);
     }
@@ -240,17 +243,13 @@
     <div class="container1">
       <form NAME="myform" action="/" method="POST" onSubmit="JavaScript:ExampleJS()">
         <textarea name="letter" id="letter" class="letter" placeholder=" Letter">{{upLetter}}</textarea>
-        <br><br>
         <p1>
           If you wish to define your own left-attaching diacritics/phones, type them below. Most diacritics are recognized by default. For a complete list, see the bottom of the page.
         </p1>
-        <br><br>
         <textarea name="optLeft" id="optLeft" class="optional1" placeholder="ʰ,ˤ">{{upOptLeft}}</textarea>
-        <br><br>
         <p2>
           If you wish to define your own multi-character phones (such as affricates or diphthongs), type them below. No affricates or diphthongs are included by default.
         </p2>
-        <br><br>
         <textarea name="optAlone" id="optAlone" class="optional2" placeholder="ts,eɪ">{{upOptAlone}}</textarea>
         <div class="container2">
           <p3>
