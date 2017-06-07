@@ -97,7 +97,7 @@ def form_post():
     if output!="":
         return render_template("index.html", upLetter=character, upOptLeft=optLeft, upOptAlone=optAlone, upInputBox=inputBox, upOutputBox=output)
     else:
-        return render_template("index.html", upLetter=character, upOptLeft=optLeft, upOptAlone=optAlone, upInputBox=inputBox, upOutputBox="\n")
+        return render_template("index.html", upLetter=character, upOptLeft=optLeft, upOptAlone=optAlone, upInputBox=inputBox, upOutputBox=" ")
 
 if __name__ == "__main__":
     app.run()
