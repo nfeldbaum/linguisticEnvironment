@@ -16,10 +16,10 @@ def form():
 
 @app.route('/', methods=['POST'])
 def form_post():
-    character = request.form['letter']
+    character = request.form['letter'].lower()
     optLeft = request.form['optLeft']
     optAlone = request.form['optAlone']
-    inputBox = request.form['inputBox']
+    inputBox = request.form['inputBox'].lower()
     words = inputBox.split()
     # Spacing diacritics, non-spacing diacritics, and suprasegmentals
     # http://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm
